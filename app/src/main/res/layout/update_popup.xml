@@ -20,7 +20,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Name"/>
+        android:text="First Name"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
@@ -28,7 +28,7 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
         android:gravity="center"
-        android:id="@+id/txtName"/>
+        android:id="@+id/txtFirstName"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Address"/>
+        android:text="Middle Name"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
@@ -45,7 +45,24 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
         android:gravity="center"
-        android:id="@+id/txtAddress"/>
+        android:id="@+id/txtMiddleName"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Last Name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:id="@+id/txtLastName"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -71,7 +88,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Phone"/>
+        android:text="Medicare No"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
@@ -79,7 +96,7 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
         android:gravity="center"
-        android:id="@+id/txtPhone"/>
+        android:id="@+id/txtMedicare"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -88,7 +105,7 @@
         android:textSize="20sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Under Care of"/>
+        android:text="Western Affairs No"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="35dp"
@@ -96,7 +113,7 @@
         android:layout_marginRight="10dp"
         android:background="@drawable/rounded"
         android:gravity="center"
-        android:id="@+id/txtUnderCare"/>
+        android:id="@+id/txtWesternAffairs"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -120,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:text="Update"
         android:textSize="21sp"
         android:textAllCaps="false"
