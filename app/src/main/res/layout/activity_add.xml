@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Add New Patient"
-        android:background="@color/purple_500"
+        android:background="#0B98C5"
         android:textSize="25dp"
         android:gravity="center"
         android:textColor="#FFF"/>
@@ -159,11 +159,12 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginTop="10dp"
+        android:textColor="#FFF"
         android:text="Back"
         android:textSize="21sp"
         android:textAllCaps="false"
         android:layout_gravity="center"
-        android:backgroundTint="#00FFC3"
+        android:backgroundTint="#0B98C5"
         android:gravity="center"
         android:id="@+id/btnBack"/>
 </LinearLayout>
