@@ -198,12 +198,8 @@ public class MainActivity extends AppCompatActivity {
                 String name = nameEditText.getText().toString();
                 EditText locationEditText = findViewById(R.id.locationEditText);
                 String location = locationEditText.getText().toString();
-
-                // 获取 Firebase 实例
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                // 获取对应的节点引用
                 DatabaseReference ref = database.getReference("false_alerts");
-                // 存储数据
                 String key = ref.push().getKey();
                 ref.child(key).child("name").setValue(name);
                 ref.child(key).child("location").setValue(location);
