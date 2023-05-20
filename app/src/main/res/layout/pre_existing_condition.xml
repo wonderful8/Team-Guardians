@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dailyReportScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/rounded_bg"
+    tools:context=".view.patient.dailyreport.DailyReportFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="-20dp"
+            android:translationZ="-20dp"
+            app:cardBackgroundColor="@color/TG_blue"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/gopher_logo" />
+
+            <ImageView
+                android:id="@+id/menuButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                app:srcCompat="@drawable/menu_button" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="54dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="330dp"
+                android:layout_marginTop="45dp"
+                app:srcCompat="@drawable/profile_avatar_women" />
+
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="90dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Pre-existing Conditions"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_marginTop="-45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerCard"
+            app:srcCompat="@drawable/rectangle1" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Medical  Diagnostics"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#000000"
+            android:text="1. Communication"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView30"
+            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView30" />
+
+        <RadioGroup
+            android:id="@+id/communication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/textView31">
+
+            <RadioButton
+                android:id="@+id/canCommunicateEffeciently"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Can communicate effeciently"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/needATranslator"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Need a Translator"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/CommunicationOther"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Other"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="158dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="2. Mobility"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView31"
+            app:layout_constraintHorizontal_bias="0.227"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+        <RadioGroup
+            android:id="@+id/mobilityRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/textView32">
+
+            <RadioButton
+                android:id="@+id/weaknessRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:text="Weakness while walking/moving"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/ableWalkRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:text="Able walk properly"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/fatigueRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:text="Fatigue"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="158dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="3.Eyesight"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView32"
+            app:layout_constraintHorizontal_bias="0.941"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+        <RadioGroup
+            android:id="@+id/eyesightRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/textView34">
+
+            <RadioButton
+                android:id="@+id/glassesRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Glasses needed" />
+
+            <RadioButton
+                android:id="@+id/eyestrainRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:text="Eyestrain/Irritated"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/normalEyesightRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:text="Normal"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="168dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="4.Hearing"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView34"
+            app:layout_constraintHorizontal_bias="0.941"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView34" />
+
+        <RadioGroup
+            android:id="@+id/hearingRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/textView35">
+
+            <RadioButton
+                android:id="@+id/accurateHearingRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="38dp"
+                android:text="Able to hear accurately"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/hearingAidRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="36dp"
+                android:text="Need Hearing Aid"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/tinnitusRadioButton"
+                android:layout_width="357dp"
+                android:layout_height="37dp"
+                android:text="Having Tinnitus"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="176dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="5.Nutrition/Hydration necessity"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView35" />
+
+        <RadioGroup
+            android:id="@+id/nutritionRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/textView36">
+
+            <RadioButton
+                android:id="@+id/fluidsRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Require minimum value of fluids"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/proteinRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Need source of protein/minerals"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/deficiencyRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Deficient of something"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="176dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="6.Aids Required"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+        <RadioGroup
+            android:id="@+id/specialRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/textView37">
+
+            <RadioButton
+                android:id="@+id/bowelBladderRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Bowel/Bladder control problems"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/wheelchairRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Need wheelchair/walking frames"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/showerRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Shower chains and hoist"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/otherSpecialRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Other"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="224dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="7.Feeding Pattern"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView37" />
+
+        <RadioGroup
+            android:id="@+id/foodRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/textView38">
+
+            <RadioButton
+                android:id="@+id/vegRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Veg or non-veg food"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/eatThemselvesRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Able to eat themselves"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/eatAssistanceRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Need assistance while eating"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/otherFoodRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:text="Other"
+                android:background="@drawable/button_shadow_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+        </RadioGroup>
+
+
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="224dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="8.Dietary Requirements"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView38" />
+
+        <RadioGroup
+            android:id="@+id/dietaryRequirementsRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            app:layout_constraintTop_toTopOf="@+id/textView39"
+            tools:layout_editor_absoluteX="-16dp"
+            >
+
+            <RadioButton
+                android:id="@+id/thickFluidRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:background="@drawable/button_shadow_bg"
+                android:text="Thick Fluid"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/normalFoodRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:background="@drawable/button_shadow_bg"
+                android:text="Normal food and fluid"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/thinFluidRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:background="@drawable/button_shadow_bg"
+                android:text="Thin fluid"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/feedingTubeRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:background="@drawable/button_shadow_bg"
+                android:text="Feeding Tube"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <RadioButton
+                android:id="@+id/otherRadioButton"
+                android:layout_width="365dp"
+                android:layout_height="43dp"
+                android:background="@drawable/button_shadow_bg"
+                android:text="Other"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="276dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="9.If any other Health conditions, please specify:"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView39" />
+
+        <EditText
+            android:id="@+id/SendMessage"
+            android:layout_width="372dp"
+            android:layout_height="231dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/edit_text_border"
+            android:ems="10"
+            android:hint="    Please enter message"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="normal"
+            android:gravity="top|start"
+            app:layout_constraintTop_toTopOf="@+id/textView40"
+            tools:layout_editor_absoluteX="16dp" />
+
+
+        <Button
+            android:id="@+id/submitFalseAlert"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="240dp"
+            android:backgroundTint="@color/TG_blue"
+            android:text="Submit"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="@+id/SendMessage"
+            android:textStyle="normal|bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+
+
